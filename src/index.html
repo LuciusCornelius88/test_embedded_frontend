@@ -20,12 +20,12 @@
       />
 
       <link rel="stylesheet" href="css/styles.css" />
-      <!-- <script src="js/client.js"></script> -->
+      <script src="index.js" type="module"></script>
    </head>
    <body>
       <header class="header">
          <div class="container header-container">
-            <a href="#status" class="logo">
+            <a href="index.html" class="logo">
                <img class="logo-img" src="./images/logo.png" alt="Logo" />
             </a>
             <h1 class="header-title">ADVANCED ROBOTIZED COMPUTER</h1>
@@ -40,8 +40,8 @@
             <section class="sidebar">
                <div class="container sidebar-container">
                   <h3 class="menu-title">MENU</h3>
-                  <ul class="list sidebar-options-list list">
-                     <li class="sidebar-option-item active">
+                  <ul class="sidebar-options-list list">
+                     <li class="sidebar-option-item">
                         <a href="#status" class="sidebar-status sidebar-link">STATUS</a>
                      </li>
                      <li class="sidebar-option-item">
@@ -66,31 +66,31 @@
                         <div class="content-block status-block">
                            <h3 class="content-block-title">System Status</h3>
                            <ul class="status-block-list list">
-                              <li class="status-block-item">
+                              <li class="status-block-item status-model">
                                  <p class="status-block-item-name">Model:</p>
                                  <p class="status-block-item-value">XYZ123</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-version">
                                  <p class="status-block-item-name">Version:</p>
                                  <p class="status-block-item-value">1.0.0</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-ip">
                                  <p class="status-block-item-name">IP Address:</p>
                                  <p class="status-block-item-value">192.168.1.1</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-connection">
                                  <p class="status-block-item-name">Connection:</p>
                                  <p class="status-block-item-value">Active</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-internet">
                                  <p class="status-block-item-name">Internet:</p>
                                  <p class="status-block-item-value">Connected</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-rx">
                                  <p class="status-block-item-name">RX:</p>
                                  <p class="status-block-item-value">500 MB</p>
                               </li>
-                              <li class="status-block-item">
+                              <li class="status-block-item status-tx">
                                  <p class="status-block-item-name">TX:</p>
                                  <p class="status-block-item-value">300 MB</p>
                               </li>
@@ -173,18 +173,18 @@
                         <h3 class="content-block-title">WAN</h3>
                         <form class="wan-block-form">
                            <div class="wan-block-select">
-                              <label for="wan-connection" class="wan-label">Connection Type</label>
-                              <select class="wan-select-options" name="wan-connection" id="wan-connection">
-                                 <option class="wan-connection-option" value="dhcp">Dynamic IP</option>
-                                 <option class="wan-connection-option" value="static">Static IP</option>
+                              <label for="wan_connection" class="wan-label">Connection Type</label>
+                              <select class="wan-select-options" name="wan_connection" id="wan_connection">
+                                 <option class="wan-connection-option" value="dynamic ip">Dynamic IP</option>
+                                 <option class="wan-connection-option" value="static ip">Static IP</option>
                               </select>
                            </div>
                            <div class="wan-block-input">
-                              <label for="ip-address" class="wan-label">IP Address</label>
+                              <label for="ip_address" class="wan-label">IP Address</label>
                               <input
                                  type="text"
-                                 name="ip-address"
-                                 id="ip-address"
+                                 name="ip_address"
+                                 id="ip_address"
                                  class="form-input"
                                  pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
                                  placeholder="192.168.4.200"
@@ -192,11 +192,11 @@
                               />
                            </div>
                            <div class="wan-block-input">
-                              <label for="subnet-mask" class="wan-label">Subnet Mask</label>
+                              <label for="subnet_mask" class="wan-label">Subnet Mask</label>
                               <input
                                  type="text"
-                                 name="subnet-mask"
-                                 id="subnet-mask"
+                                 name="subnet_mask"
+                                 id="subnet_mask"
                                  class="form-input"
                                  pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
                                  placeholder="255.255.255.0"
@@ -216,11 +216,11 @@
                               />
                            </div>
                            <div class="wan-block-input">
-                              <label for="primary-dns" class="wan-label">Primary DNS</label>
+                              <label for="primary_dns" class="wan-label">Primary DNS</label>
                               <input
                                  type="text"
-                                 name="primary-dns"
-                                 id="primary-dns"
+                                 name="primary_dns"
+                                 id="primary_dns"
                                  class="form-input"
                                  pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
                                  placeholder="192.168.1.1"
@@ -228,11 +228,11 @@
                               />
                            </div>
                            <div class="wan-block-input">
-                              <label for="secondary-dns" class="wan-label">Secondary DNS</label>
+                              <label for="secondary_dns" class="wan-label">Secondary DNS</label>
                               <input
                                  type="text"
-                                 name="secondary-dns"
-                                 id="secondary-dns"
+                                 name="secondary_dns"
+                                 id="secondary_dns"
                                  class="form-input"
                                  pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
                                  placeholder="192.168.1.5"
